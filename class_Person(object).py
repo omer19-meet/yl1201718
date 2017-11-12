@@ -1,5 +1,5 @@
 class Person(object):
-	def__init__(self,name, age, gender) :
+	def __init__(self,name, age, gender):
 		self.name = name
 		self.age = age
 		self.gender = gender
@@ -7,5 +7,5 @@ class Person(object):
 	def talk(self):
 		print("my name is omer")
 
-O = Person(omer, 16, male )
+O = Person( omer, 16, male )
 O.talk()
