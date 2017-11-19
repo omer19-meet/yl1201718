@@ -23,15 +23,24 @@ class person(object):
 		self.home_add  = home_add
 		self.status = status
 		self.religion = religion
-	def breakfast()
-		
+	def present(self):
+		print("Hellow, my name is " , self.name ,"I am" ,self.age , "yrs old,""i'm a" , self.gender , "i live in" , self.home_add ,"i'm " ,self.status ,"and",  self.religion)
+
+
+
+
 
 frog = animal("frog"," Quack!", 6, "green")
-frog.eat(" fly")
-frog.make_s(10)
+#frog.eat(" fly")
+#frog.make_s(10)
 
-moshe = person("Moshe Rabeno", 120, "male", "Eygipt land", "slave", "Jowish")
+moshe = person("Moshe Rabeno", 2 , "male", "Egypt land", "slave", "Jowish")
+#moshe.present()
 
-print(frog)
+shelly = person("shelly :(", 7,"annoing", "Givaat Zeev", "Shtohah", "zona")
+shelly.present()
+
+
+
 
 		
