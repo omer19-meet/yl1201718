@@ -51,7 +51,15 @@ she1 = Rectangel(100,30)
 
 gassan = Square(30)
 gassan.fill_col(yellow)
-
-
 mainloop()
+
+
+
+
+
+
+
+
+
+
 
