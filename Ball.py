@@ -5,17 +5,17 @@ import random
 import time
 
 class Ball(Turtle):
-	def __init__(self,x,y,dx,dy,r):
+	def __init__(self,x,y,dx,dy,radius):
 		Turtle.__init__(self)
 		self.pu()
 		self.x= xcor()
 		self.y= ycor()
 		self.dx= dx
 		self.dy= dy
-		self.r=r
+		self.radius=radius
 		self.color=color
 		self.shape("circle")
-		self.shapesize = r/10
+		self.shapesize(radius/10)
 
 		r = random.randint(0,255)
 		g = random.randint(0,255)
@@ -25,32 +25,32 @@ class Ball(Turtle):
 
 
 	def move(self, screen_w, screen_h):
-		current_x = xcor()
-		new_x = current_x+dx
+		current_x = self.xcor()
+		new_x = current_x+self.dx
 		
-		current_y  = ycor()
-		new_y = current_y+dy
+		current_y  = self.ycor()
+		new_y = current_y+self.dy
 
-		right_s_ball = new_x+r
-		left_s_ball  = new_x-r
-		up_s_ball  = new_y+r
-		down_s_ball = new_y-r
+		right_s_ball = new_x+self.radius
+		left_s_ball  = new_x-self.radius
+		up_s_ball  = new_y+self.radius
+		down_s_ball = new_y-self.radius
 
-		Ball.goto(new_x,new_y)
+		self.goto(new_x,new_y)
 
-		if right_s_ball > screen_w:
-			self.dx = -dx
-			Ball.goto(new_x,new_y)
+		if right_s_ball >= screen_w:
+			self.dx = self.dx*-1
+			# Ball.goto(new_x,new_y)
 
-		if left_s_ball < -screen_w:
-			self.dx = -dx
-			Ball.goto(new_x,new_y)
+		if left_s_ball <= -screen_w:
+			self.dx = self.dx*-1
+			# Ball.goto(new_x,new_y)
 
-		if up_s_ball > screen_h:
-			self.dy = -dy
+		if up_s_ball >= screen_h:
+			self.dy = self.dy*-1
 
-		if down_s_ball < screen_h:
-			self.dy = -dy
+		if down_s_ball <= screen_h:
+			self.dy = self.dy*-1
 
 			
 
