@@ -8,12 +8,11 @@ class Ball(Turtle):
 	def __init__(self,x,y,dx,dy,radius):
 		Turtle.__init__(self)
 		self.pu()
-		self.x= xcor()
-		self.y= ycor()
+		self.x= x
+		self.y= y
 		self.dx= dx
 		self.dy= dy
 		self.radius=radius
-		self.color=color
 		self.shape("circle")
 		self.shapesize(radius/10)
 
@@ -49,7 +48,7 @@ class Ball(Turtle):
 		if up_s_ball >= screen_h:
 			self.dy = self.dy*-1
 
-		if down_s_ball <= screen_h:
+		if down_s_ball <= -screen_h:
 			self.dy = self.dy*-1
 
 			
