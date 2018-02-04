@@ -8,8 +8,9 @@ class Ball(Turtle):
 	def __init__(self,x,y,dx,dy,radius):
 		Turtle.__init__(self)
 		self.pu()
-		self.x= x
-		self.y= y
+		# self.x= x
+		# self.y= y
+		self.goto(x,y)
 		self.dx= dx
 		self.dy= dy
 		self.radius=radius
